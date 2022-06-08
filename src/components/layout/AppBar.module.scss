@@ -1,0 +1,17 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.contentBar {
+  display: none;
+  flex-grow: 1;
+  justify-content: center;
+  @include breakpoints.media-breakpoint-up(md) {display: flex}
+  .item {
+    color: variables.$white;
+    display: block;
+    margin-right: 2rem;
+    &:last-of-type{
+        margin-right: 0;
+    }
+  }
+}

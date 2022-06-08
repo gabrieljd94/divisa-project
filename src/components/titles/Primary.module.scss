@@ -1,0 +1,31 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.wrapper {
+  display: block;
+  text-align: center;
+  @include breakpoints.media-breakpoint-up(sm) {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: variables.$black;
+    
+    @include breakpoints.media-breakpoint-up(sm) {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+  .button {
+    margin-top: 1rem;
+    background-color: variables.$secondaryColor;
+    @include breakpoints.media-breakpoint-up(sm) {
+      margin-top: 0
+    }
+  }
+}

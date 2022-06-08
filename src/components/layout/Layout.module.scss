@@ -1,0 +1,15 @@
+.layoutWrapper {
+  height: '100%';
+  display: 'flex';
+  .layoutWrapperContent {
+    flex-grow: 1;
+    min-width: 0;
+    display: 'flex';
+    min-height: '100vh';
+    flex-direction: 'column';
+    .pageContent{
+        margin-top: 6rem;
+        margin-bottom: 4rem
+    }
+  }
+}
