@@ -1,5 +1,5 @@
 // React Imports
-import Link from 'next/Link'
+import Link from 'next/link'
 
 // ** MUI Imports
 import Typography from '@mui/material/Typography'

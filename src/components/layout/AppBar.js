@@ -1,6 +1,6 @@
 // ** React Imports
 import { Fragment, useState } from 'react'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 // ** MUI Imports
 import useMediaQuery from '@mui/material/useMediaQuery'

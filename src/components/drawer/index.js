@@ -1,5 +1,5 @@
 // ** React Imports
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Fragment } from 'react'
 
 // ** MUI Imports
