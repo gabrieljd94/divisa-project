@@ -129,13 +129,13 @@ export async function getServerSideProps({ req }) {
   }
 
   //Order by distance
-  const userIP = requestIp.getClientIp(req)
-
+  const userIP = await axios.get(`https://api.ipify.org`)
+  console.log(userIP.data)
   let distanceByIP
   try {
     //Getting distance lat/long by user ip
     
-    distanceByIP = await axios.get(`http://ip-api.com/json/${userIP}`)
+    distanceByIP = await axios.get(`http://ip-api.com/json/${userIP.data}`)
     // distanceByIP = await axios.get(`http://ip-api.com/json/`)
 
     if (distanceByIP && aparcamientosData) {
