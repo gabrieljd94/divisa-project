@@ -1,3 +1,6 @@
+// ** React Imports
+import { useRouter } from 'next/router'
+
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -12,12 +15,19 @@ const Layout = props => {
   // ** Props
   const { children } = props
 
+  // ** Hooks
+  const router = useRouter()
+
   return (
     <Box className={styles.layoutWrapper}>
       <Box className={styles.layoutWrapperContent}>
         <AppBar />
 
-        <Container maxWidth='lg' className={styles.pageContent}>
+        <Container
+          sx={{ ...(router.route === '/' && { marginTop: '0 !important', marginBottom: '0 !important' }) }}
+          maxWidth='lg'
+          className={styles.pageContent}
+        >
           {children}
         </Container>
       </Box>
